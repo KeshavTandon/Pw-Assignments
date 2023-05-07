@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const text="I am keshav Tandon Currently i am pursuing Btech from ABES Engineering College"
+        function countWords(text)
+        {
+            const words= text.toLowerCase().split(" ");
+            const wordCount=new Map()
+            for(const word of words){
+                const count=wordCount.get(word) || 0
+                wordCount.set(word,count+1)
+            }
+            return wordCount 
+        }
+        const wordsCount=countWords(text);
+        console.log(wordsCount);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            name:"Mithun",
+            age:21,
+            address:{
+                street:"2B 56 ",
+                city:"GHAZIABAD",
+                state:"Uttar Pradesh"
+            },
+        };
+
+        function nesting(person)
+        {
+            const obj=new Object({name:person.name,street:person.address.street,city:person.address.city,state:person.address.state});
+            return obj;
+        }
+        const finalAns=new Object(nesting(person))
+        console.log(finalAns);
+    </script>
+</body>
+</html>
